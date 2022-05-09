@@ -1,0 +1,175 @@
+<script type="text/javascript">
+    if (localStorage.getItem("styleChoice") == "light") {
+        localStorage.setItem("styleChoice", "light");
+
+        const elements = document.getElementsByTagName("head")[0].getElementsByClassName('darkmode');
+
+        while (elements.length > 0) {
+            elements[0].parentNode.removeChild(elements[0]);
+        }
+
+    } else {
+
+        var csdarktheme = '*{background-color:black !important;color:white !important}.d-flex{background-color:transparent !important;}#customlehighnav{display:inline !important}#customlehighnav2{display:inline !important}.col-6.card-body, .card-text{background-color: rgba(0,152,158,255) !important;}.block-theme-widget container{background-color: rgb(204,255,238) !important; border: 4px solid  rgb(20,208,218) !important; padding-top:20px !important;}.btn btn-secondary btn-block rounded{background-color: white !important;}.mb-4{background-color: rgb(204,255,238) !important;}#lehighlogo{z-index:9999;position:fixed;top:0;}#customlehighnav{z-index:999990 !important;position:fixed;top:0;left:5px;background-color:transparent;pointer-events: none;}#rightstuff{position:fixed;top:9px;right:30px;}.mybutton{padding-top:10px;text-align: center;background-color:black;border: 2px solid #3ecbb8;font-family: inherit;font-size: 16px;display: inline-block;position: relative;color:rgb(255,255,255);height:48px;width:120px;margin:0;}.mybutton a{text-decoration: none;color:white}';
+
+
+        var darkmode = document.createElement('style');
+        darkmode.setAttribute("class", "darkmode");
+
+        darkmode.appendChild(document.createTextNode(csdarktheme));
+
+        document.getElementsByTagName('head')[0].appendChild(darkmode);
+    }
+</script>
+
+
+
+
+<nav id="customlehighnav" class="navbar navbar-expand" style="display:none">
+
+    <span class="logo d-none d-sm-inline" style="margin-right: 25px;">
+                <img src="https://coursesite.lehigh.edu/pluginfile.php/1/core_admin/logocompact/300x300/1641185111/lehigh_logo_KO.png" alt="Home">
+            </span>
+
+
+
+    <a href="https://coursesite.lehigh.edu" id="myhomebutton" class="navbar-brand aalink has-logo
+                    ">
+        <!-- 
+                    <span class="logo d-none d-sm-inline">
+                        <img src="https://coursesite.lehigh.edu/pluginfile.php/1/core_admin/logocompact/300x300/1641185111/lehigh_logo_KO.png" alt="Home">
+                    </span>
+                 -->
+        <span class="site-name d-none d-md-inline">Home</span></a>
+    <ul id="rightstuff">
+        <!-- user_menu -->
+        <li class="nav-item d-flex align-items-center">
+            <div class="usermenu">
+                <div class="action-menu moodle-actionmenu nowrap-items d-inline" id="action-menu-0" data-enhance="moodle-core-actionmenu">
+
+                    <div class="menubar d-flex " id="action-menu-0-menubar" role="menubar">
+
+
+
+
+                        <div class="action-menu-trigger">
+                            <div class="dropdown">
+                                <a href="#" tabindex="0" class="d-inline-block  dropdown-toggle icon-no-margin" id="action-menu-toggle-0" aria-label="User menu" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" aria-controls="action-menu-0-menu">
+                            
+                            <span class="userbutton"><span class="usertext mr-1">Joshua (Josh they/them) Tripoli</span><span class="avatars"><span class="avatar current"><img src="https://coursesite.lehigh.edu/pluginfile.php/3665645/user/icon/classic/f2?rev=120415381" class="userpicture" width="35" height="35" alt=""></span></span></span>
+                                
+                            <b class="caret"></b>
+                        </a>
+                                <div class="dropdown-menu dropdown-menu-right menu  align-tr-br" id="action-menu-0-menu" data-rel="menu-content" aria-labelledby="action-menu-toggle-0" role="menu" data-align="tr-br">
+                                    <a href="https://coursesite.lehigh.edu/my/" class="dropdown-item menu-action" role="menuitem" data-title="mymoodle,admin" aria-labelledby="actionmenuaction-1">
+                                <i class="icon fa fa-tachometer fa-fw " aria-hidden="true"></i>
+                                <span class="menu-action-text" id="actionmenuaction-1">Dashboard</span>
+                        </a>
+                                    <div class="dropdown-divider" role="presentation"><span class="filler">&nbsp;</span></div>
+                                    <a href="https://coursesite.lehigh.edu/user/profile.php?id=73301" class="dropdown-item menu-action" role="menuitem" data-title="profile,moodle" aria-labelledby="actionmenuaction-2">
+                                <i class="icon fa fa-user fa-fw " aria-hidden="true"></i>
+                                <span class="menu-action-text" id="actionmenuaction-2">Profile</span>
+                        </a>
+                                    <a href="https://coursesite.lehigh.edu/grade/report/overview/index.php" class="dropdown-item menu-action" role="menuitem" data-title="grades,grades" aria-labelledby="actionmenuaction-3">
+                                <i class="icon fa fa-table fa-fw " aria-hidden="true"></i>
+                                <span class="menu-action-text" id="actionmenuaction-3">Grades</span>
+                        </a>
+                                    <a href="https://coursesite.lehigh.edu/message/index.php" class="dropdown-item menu-action" role="menuitem" data-title="messages,message" aria-labelledby="actionmenuaction-4">
+                                <i class="icon fa fa-comment fa-fw " aria-hidden="true"></i>
+                                <span class="menu-action-text" id="actionmenuaction-4">Messages</span>
+                        </a>
+                                    <a href="https://coursesite.lehigh.edu/user/preferences.php" class="dropdown-item menu-action" role="menuitem" data-title="preferences,moodle" aria-labelledby="actionmenuaction-5">
+                                <i class="icon fa fa-wrench fa-fw " aria-hidden="true"></i>
+                                <span class="menu-action-text" id="actionmenuaction-5">Preferences</span>
+                        </a>
+                                    <div class="dropdown-divider" role="presentation"><span class="filler">&nbsp;</span></div>
+                                    <a href="https://coursesite.lehigh.edu/login/logout.php?sesskey=mf0KIu5iJU" class="dropdown-item menu-action" role="menuitem" data-title="logout,moodle" aria-labelledby="actionmenuaction-6">
+                                <i class="icon fa fa-sign-out fa-fw " aria-hidden="true"></i>
+                                <span class="menu-action-text" id="actionmenuaction-6">Log out</span>
+                        </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </li>
+    </ul>
+    <!-- search_box -->
+</nav>
+
+
+
+<div id="customlehighnav2" class="header-container" style="display:none;position:fixed;top:0px;left:0px;min-height: 50px;width: 100%;z-index:9999;pointer-events:none;background-color: transparent;">
+    <header style="z-index: 99999;max-width: 900px;min-height: 50px;display: flex;justify-content: center;align-items: center; position: relative;color:white;background-color:rgb(80,45,15);pointer-events: auto;margin:0 auto;">
+        <nav id="mynav">
+            <div class="mybutton" style="margin-right:-8px">
+                <a href="https://coursesite.lehigh.edu/course/view.php?id=195548">Home</a>
+            </div>
+            <div class="mybutton" style="margin-right:-8px">
+                <a href="https://coursesite.lehigh.edu/mod/page/view.php?id=3487621">Academics</a>
+            </div>
+            <div class="mybutton" style="margin-right:-8px">
+                <a href="https://coursesite.lehigh.edu/mod/page/view.php?id=3489370">On-Campus</a>
+            </div>
+            <div class="mybutton" style="margin-right:-8px">
+                <a href="https://coursesite.lehigh.edu/mod/page/view.php?id=3489373">Employment</a>
+            </div>
+            <div class="mybutton" style="margin-right:-8px">
+                <a href="https://coursesite.lehigh.edu/mod/page/view.php?id=3489376">Computers</a>
+            </div>
+            <div class="mybutton" style="margin-right:-8px">
+                <a href="https://coursesite.lehigh.edu/mod/page/view.php?id=3489379">Programming</a>
+            </div>
+            <div class="mybutton" style="margin-right:-8px">
+                <a href="https://coursesite.lehigh.edu/mod/page/view.php?id=3489382">Sitemap</a>
+            </div>
+        </nav>
+    </header>
+</div>
+
+
+
+
+
+
+<h2>Change Style</h2>
+<button onclick="swapToDark()">Dark Mode</button>
+<button onclick="removeDark()">Light Mode</button>
+
+<script type="text/javascript">
+    function swapToDark() {
+        localStorage.setItem("styleChoice", "dark");
+
+        var csdarktheme = '*{background-color:black !important;color:white !important}.d-flex{background-color:transparent !important;}#customlehighnav{display:inline !important}#customlehighnav2{display:inline !important}.col-6.card-body, .card-text{background-color: rgba(0,152,158,255) !important;}.block-theme-widget container{background-color: rgb(204,255,238) !important; border: 4px solid  rgb(20,208,218) !important; padding-top:20px !important;}.btn btn-secondary btn-block rounded{background-color: white !important;}.mb-4{background-color: rgb(204,255,238) !important;}#lehighlogo{z-index:9999;position:fixed;top:0;}#customlehighnav{z-index:999990 !important;position:fixed;top:0;left:5px;background-color:transparent;pointer-events: none;}#rightstuff{position:fixed;top:9px;right:30px;}.mybutton{padding-top:10px;text-align: center;background-color:black;border: 2px solid #3ecbb8;font-family: inherit;font-size: 16px;display: inline-block;position: relative;color:rgb(255,255,255);height:48px;width:120px;margin:0;}.mybutton a{text-decoration: none;color:white}';
+
+
+        var darkmode = document.createElement('style');
+        darkmode.setAttribute("class", "darkmode");
+
+        darkmode.appendChild(document.createTextNode(csdarktheme));
+
+        document.getElementsByTagName('head')[0].appendChild(darkmode);
+
+    }
+</script>
+
+
+<script type="text/javascript">
+    function removeDark() {
+        localStorage.setItem("styleChoice", "light");
+
+        const elements = document.getElementsByTagName("head")[0].getElementsByClassName('darkmode');
+
+        while (elements.length > 0) {
+            elements[0].parentNode.removeChild(elements[0]);
+        }
+
+    }
+</script>
+
+
+<p>Saved name is:</p>
+<p id="myStyle"></p>
