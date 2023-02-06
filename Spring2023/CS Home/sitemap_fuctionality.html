@@ -1,0 +1,117 @@
+<script type="text/javascript">
+    var cssRules =
+        '#mySearch{width: 100%;font-size: 18px;padding: 11px;border: 1px solid #ddd;}#myMenu {list-style-type: none;padding: 0;margin: 0;}#myMenu li a {padding: 12px;text-decoration: none;color: black;display: block}#myMenu li a:hover {background-color: #ffffe0;}#innerMenu{margin-left: 25px;list-style-type: square;}#programmingInnerMenu > li:nth-child(odd) {background-color: #D3D3D3 !important;}#programmingInnerMenu > li:nth-child(even) {background-color: #eee !important;}#academicInnerMenu > li:nth-child(odd) {background-color: #D3D3D3 !important;}#academicInnerMenu > li:nth-child(even) {background-color: #eee !important;}#extraInnerMenu > li:nth-child(odd) {background-color: #D3D3D3;}#extraInnerMenu > li:nth-child(even) {background-color: #eee;}#employInnerMenu > li:nth-child(odd) {background-color: #D3D3D3;}#facultyInnerMenu > li:nth-child(even) {background-color: #eee;}#facultyInnerMenu > li:nth-child(odd) {background-color: #D3D3D3;}#employInnerMenu > li:nth-child(even) {background-color: #eee;}#computingInnerMenu > li:nth-child(even) {background-color: #eee;}#computingInnerMenu > li:nth-child(odd) {background-color: #D3D3D3;}';
+
+    var styleElement = document.createElement('style');
+
+    styleElement.appendChild(document.createTextNode(cssRules));
+
+    document.getElementsByTagName('head')[0].appendChild(styleElement);
+
+    // Set Academic menu defaults
+    ulAcademic = document.getElementById("academicInnerMenu");
+    liAcademic = ulAcademic.getElementsByTagName("li");
+
+    for (i = 0; i < liAcademic.length; i++) {
+        liAcademic[i].style.display = "none";
+    }
+
+    // Set Extracurricular menu defaults
+    ulAcademic = document.getElementById("extraInnerMenu");
+    liAcademic = ulAcademic.getElementsByTagName("li");
+
+    for (i = 0; i < liAcademic.length; i++) {
+        liAcademic[i].style.display = "none";
+    }
+
+    // Set Employment menu defaults
+    ulAcademic = document.getElementById("employInnerMenu");
+    liAcademic = ulAcademic.getElementsByTagName("li");
+
+    for (i = 0; i < liAcademic.length; i++) {
+        liAcademic[i].style.display = "none";
+    }
+
+    // Set Computing menu defaults
+    ulAcademic = document.getElementById("computingInnerMenu");
+    liAcademic = ulAcademic.getElementsByTagName("li");
+
+    for (i = 0; i < liAcademic.length; i++) {
+        liAcademic[i].style.display = "none";
+    }
+
+    //document.getElementById("programmingInnerMenu").style.display = "none";
+    // Set programming menu defaults
+    ul = document.getElementById("programmingInnerMenu");
+    li = ul.getElementsByTagName("li");
+
+    for (i = 0; i < li.length; i++) {
+        li[i].style.display = "none";
+    }
+
+    // Set faculty menu defaults
+    ul = document.getElementById("facultyInnerMenu");
+    li = ul.getElementsByTagName("li");
+
+    for (i = 0; i < li.length; i++) {
+        li[i].style.display = "none";
+    }
+
+
+
+    function expandRow(menuToExpand) {
+        let temp = "";
+
+        // Select which row to expand based on which number was passed in
+        if (menuToExpand === 0) {
+            temp = "programmingInnerMenu";
+        } else if (menuToExpand === 1) {
+            temp = "academicInnerMenu";
+        } else if (menuToExpand === 2) {
+            temp = "extraInnerMenu";
+        } else if (menuToExpand === 3) {
+            temp = "employInnerMenu";
+        } else if (menuToExpand === 4) {
+            temp = "facultyInnerMenu";
+        } else if (menuToExpand === 5) {
+            temp = "computingInnerMenu";
+        }
+
+        //var printVal = "Value:" + temp;
+        //alert(printVal);
+        //document.getElementById("programmingInnerMenu").style.display = "";
+        ul = document.getElementById(temp);
+        li = ul.getElementsByTagName("li");
+
+        // toggle to opposite state
+        for (i = 0; i < li.length; i++) {
+            if (li[i].style.display === "none") {
+                li[i].style.display = "";
+            } else {
+                li[i].style.display = "none";
+            }
+        }
+
+    }
+
+    function myFunction() {
+        // Declare variables
+        var input, filter, ul, li, a, i;
+        input = document.getElementById("mySearch");
+        filter = input.value.toUpperCase();
+        ul = document.getElementById("myMenu");
+        li = ul.getElementsByTagName("li");
+
+
+        // Loop through all list items, and hide those who don't match the search query
+        for (i = 0; i < li.length; i++) {
+            console.log("Elements searched " + li[i]);
+            a = li[i].getElementsByTagName("a")[0];
+            if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                li[i].style.display = "";
+            } else {
+                li[i].style.display = "none";
+            }
+        }
+    }
+</script>

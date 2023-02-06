@@ -1,0 +1,66 @@
+<input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a category">
+
+<ul id="myMenu">
+    <li clas="menu-item">
+        <a href="http://www.cse.lehigh.edu/docs/" target="_blank">Lehigh CSE Documentation Website</a>
+    </li>
+    <li class="menu-item"><a href="http://piazza.com/lehigh/other/cs123" target="_blank">SiCS Piazza</a></li>
+    <li class="menu-item"><a onclick="expandRow(1)">Academics</a></li>
+    <ul class="menu-item" id="academicInnerMenu">
+        <li class="menu-item"><a href="https://coursesite.lehigh.edu/mod/page/view.php?id=3487621" target="_blank">Registration</a></li>
+        <li class="menu-item"><a href="https://coursesite.lehigh.edu/mod/page/view.php?id=3487621#tips" target="_blank">Tips for Success in CS</a></li>
+    </ul>
+    <li class="menu-item"><a onclick="expandRow(2)">Extracurriculars</a></li>
+    <ul class="menu-item" id="extraInnerMenu">
+        <li class="menu-item"><a href="https://coursesite.lehigh.edu/mod/page/view.php?id=3489370#linc" target="_blank">LINC</a></li>
+        <li class="menu-item"><a href="https://coursesite.lehigh.edu/mod/page/view.php?id=3489370#acm" target="_blank">ACM Coders Community</a></li>
+        <li class="menu-item"><a href="https://coursesite.lehigh.edu/mod/page/view.php?id=3489370#wics" target="_blank">Women In Computer Science</a></li>
+        <li class="menu-item"><a href="https://coursesite.lehigh.edu/mod/page/view.php?id=3489370#csb" target="_blank">Computer Science Business</a></li>
+        <li class="menu-item"><a href="https://coursesite.lehigh.edu/mod/page/view.php?id=3489370#crypto" target="_blank">Lehigh CryptoCurrency Club</a></li>
+        <li class="menu-item"><a href="https://coursesite.lehigh.edu/mod/page/view.php?id=3489370#venture" target="_blank">New Ventures Club</a></li>
+        <li class="menu-item"><a href="https://coursesite.lehigh.edu/mod/page/view.php?id=3489370#creative" target="_blank">Creative Spaces: Wilbur, FML, Building C</a></li>
+    </ul>
+    <li class="menu-item"><a onclick="expandRow(3)">Employment</a></li>
+    <ul class="menu-item" id="employInnerMenu">
+        <li class="menu-item"><a href="https://coursesite.lehigh.edu/mod/page/view.php?id=3489373#employ" target="_blank">Handshake, Lehigh Connects</a></li>
+        <li class="menu-item"><a href="https://coursesite.lehigh.edu/mod/page/view.php?id=3489373#internship" target="_blank">Internship Seach</a></li>
+        <li class="menu-item"><a href="https://coursesite.lehigh.edu/mod/page/view.php?id=3489373#workStudy" target="_blank">Work Study Jobs</a></li>
+        <li class="menu-item"><a href="https://coursesite.lehigh.edu/mod/page/view.php?id=3489373#hackathons" target="_blank">Hackathons</a></li>
+        <li class="menu-item"><a href="https://coursesite.lehigh.edu/mod/page/view.php?id=3489373#mountain" target="_blank">Mountaintop Programs</a></li>
+        <li class="menu-item"><a href="https://coursesite.lehigh.edu/mod/page/view.php?id=3489373#grants" target="_blank">CAS, Strohl, Study Abroad Grants</a></li>
+        <li class="menu-item"><a href="https://coursesite.lehigh.edu/mod/page/view.php?id=3489373#reu" target="_blank">NSF REU</a></li>
+    </ul>
+    <li class="menu-item"><a onclick="expandRow(5)">Computing</a></li>
+    <ul class="menu-item" id="computingInnerMenu">
+        <li class="menu-item"><a href="https://coursesite.lehigh.edu/mod/page/view.php?id=3489376#terms" target="_blank">Computer Terms</a></li>
+        <li class="menu-item"><a href="https://coursesite.lehigh.edu/mod/page/view.php?id=3489376#sunlab" target="_blank">SubLab Computing Lab</a></li>
+        <li class="menu-item"><a href="https://coursesite.lehigh.edu/mod/page/view.php?id=3489376#sandbox" target="_blank">SandBox Computing Lab</a></li>
+        <li class="menu-item"><a href="https://coursesite.lehigh.edu/mod/page/view.php?id=3489376#wsl" target="_blank">WSL: Windows Subsystem for Linux</a></li>
+        <li class="menu-item"><a href="https://coursesite.lehigh.edu/mod/page/view.php?id=3489376#commandLine" target="_blank">Command Line</a></li>
+        <li class="menu-item"><a href="https://coursesite.lehigh.edu/mod/page/view.php?id=3489376#unix" target="_blank">Unix Shell</a></li>
+        <li class="menu-item"><a href="https://coursesite.lehigh.edu/mod/page/view.php?id=3489376#bash" target="_blank">Bash</a></li>
+        <li class="menu-item"><a href="https://coursesite.lehigh.edu/mod/page/view.php?id=3489376#textEditors" target="_blank">Vim, Emacs, Nano</a></li>
+    </ul>
+    <li class="menu-item"><a onclick="expandRow(0)">Programming</a></li>
+    <ul class="menu-item" id="programmingInnerMenu">
+        <li class="menu-item"><a href="https://coursesite.lehigh.edu/mod/page/view.php?id=3869516" target="_blank">Python</a></li>
+        <li class="menu-item"><a href="https://coursesite.lehigh.edu/mod/page/view.php?id=3869534" target="_blank">Git</a></li>
+        <li class="menu-item"><a href="https://coursesite.lehigh.edu/mod/page/view.php?id=3478606" target="_blank">Debugging: GDB and Valgrind</a></li>
+        <li class="menu-item"><a href="https://coursesite.lehigh.edu/mod/page/view.php?id=3478612" target="_blank">IDE: Visual Studio Code, eclipse, Repl.it</a></li>
+        <li class="menu-item"><a href="https://coursesite.lehigh.edu/mod/page/view.php?id=3854771#SSH" target="_blank">Sunlab via SSH</a></li>
+        <li class="menu-item"><a href="https://coursesite.lehigh.edu/mod/page/view.php?id=3854771#SSHGateway" target="_blank">Sunlab via Lehigh's SSH Gateway</a></li>
+        <li class="menu-item"><a href="https://coursesite.lehigh.edu/mod/page/view.php?id=3854771#macCPU" target="_blank">Find MAC CPU Architecture</a></li>
+        <li class="menu-item"><a href="https://coursesite.lehigh.edu/mod/page/view.php?id=3854771#guacamole" target="_blank">Apache Guacamole</a></li>
+        <li class="menu-item"><a href="https://coursesite.lehigh.edu/mod/page/view.php?id=3854771#javaInstall" target="_blank">Java Installation and Removal</a></li>
+        <li class="menu-item"><a href="https://coursesite.lehigh.edu/mod/page/view.php?id=3854771#magicGPU" target="_blank">MAGIC GPU</a></li>
+        <li class="menu-item"><a href="https://coursesite.lehigh.edu/mod/page/view.php?id=3854771#sqldeveloper" target="_blank">SQL Developer</a></li>
+        <li class="menu-item"><a href="https://coursesite.lehigh.edu/mod/page/view.php?id=3854771#xForwarding" target="_blank">SSH X-Forwarding</a></li>
+        <li class="menu-item"><a href="https://coursesite.lehigh.edu/mod/page/view.php?id=3854771#vsInstall" target="_blank">Visual Studio Code</a></li>
+    </ul>
+    <li class="menu-item"><a onclick="expandRow(4)">Faculty</a></li>
+    <ul class="menu-item" id="facultyInnerMenu">
+        <li class="menu-item"><a href="https://coursesite.lehigh.edu/mod/page/view.php?id=3489382#advisors" target="_blank">Academic Advisors</a></li>
+        <li class="menu-item"><a href="https://coursesite.lehigh.edu/mod/page/view.php?id=3489382#classTech" target="_blank">Classroom Tech: Computing Sites, Piazza, Panopto</a></li>
+        <li class="menu-item"><a href="https://coursesite.lehigh.edu/mod/page/view.php?id=3489382#game" target="_blank">Learning Games: Kahoot, Booklet, Gimkit, Quizlet, Quizzizz</a></li>
+    </ul>
+</ul>
