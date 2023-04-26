@@ -1,0 +1,236 @@
+<script type="text/javascript">
+    if (localStorage.getItem("styleChoice") == "light") {
+        localStorage.setItem("styleChoice", "light");
+
+        const elements = document.getElementsByTagName("head")[0].getElementsByClassName('darkmode');
+
+        while (elements.length > 0) {
+            elements[0].parentNode.removeChild(elements[0]);
+        }
+
+        var cssRules =
+            '.mybutton{font-family: inherit;padding: 10px 5px;margin-left: 20px;font-size: 17px;display: inline-block;margin-top:2px;position: relative;}.mybutton a{text-decoration: none;color:white}#completionprogressid{display: none !important}@media screen and (max-width: 1515px) {#mynav {display: none !important;}}@media screen and (max-width: 1200px){.col-12.pt-3.pb-3 .card-body {background-image: none !important;}.breadcrumb-item{display:block !important;}h1{display:block !important;}}@media screen and (max-width: 1000px) {.theme-cards.row {display: block !important;}.card-bg-light{width: 200%}}';
+
+
+
+        var styleElement = document.createElement('style');
+
+        styleElement.appendChild(document.createTextNode(cssRules));
+
+        document.getElementsByTagName('head')[0].appendChild(styleElement);
+
+    } else {
+        var csdarktheme = '*{background-color:black !important;color:white !important}.card-footer{background-color: #004346 !important;z-index:999999999 !important;}.card-bg-light{background-color: rgba(0, 177, 186, 1)  !important;border: 2px solid rgba(0, 177, 186, 1) ;z-index: 2 !important;padding:0 !important;margin: 0 !important;}.d-flex{background-color:transparent !important;}.col-6.card-body, .card-text{background-color: black !important;font-weight: 400 !important;}.grid-info{background-color: black !important;color: white !important;}.card-title-cs{background-color: rgba(0, 177, 186, 1)  !important; color: black !important;z-index:200 !important;}.block-theme-widget container{border: 4px solid  rgb(20,208,218) !important; padding-top:20px !important;}.btn btn-secondary btn-block rounded{background-color: green !important; color: white;}.mybutton{padding-top:20px;text-align: center;border: 2px solid #3ecbb8;font-family: inherit;font-size: 16px;display: inline-block;position: relative;color:rgb(255,255,255);height:48px;width:120px;margin:0;padding:0;}.mybutton a{text-decoration: none;color:white}.header-container{left:250px !important;padding:0px !important;margin:0px !important;z-index:1031 !important;background-color: blue !important;}.logo, .nav-item{z-index:9999999999999 !important}.mybutton{padding:0px !important;margin-left: -6px !important;left:100px;background-color: black !important;}.header-container,#lightnav,#mynav,#myheaderdark{background-color: transparent !important;pointer-events:none !important;}#mynav{margin:0 !important;padding:0 !important}.mybutton{pointer-events:auto;padding-top:10px !important;}#yui_3_17_2_1_1655515019675_4161{background-color:black !important;color:black !important}*{background-color:black !important;color:white !important}.fixed-top,.navbar{background-color:black !important;color:white !important}#completionprogressid{display: none !important}#myMenu ul a{background-color: #222222 !important;}.menu-item a:hover {background-color: #5A5A5A !important;} #myMenu ul a:hover  {background-color: #5A5A5A !important;}@media screen and (max-width: 1535px) {#mynav {display: none !important;}}';
+
+
+
+        var darkmode = document.createElement('style');
+        darkmode.setAttribute("class", "darkmode");
+
+        darkmode.appendChild(document.createTextNode(csdarktheme));
+
+        document.getElementsByTagName('head')[0].appendChild(darkmode);
+
+        // Change search menu colors to dark mode
+        var search = document.getElementById("myMenu");
+        search.style.backgroundColor = "pink !important";
+    }
+</script>
+
+
+
+<div id="lightnav" class="header-container" style="position:fixed;top:0px;left:350px;min-height: 50px;z-index:9999;pointer-events:none">
+
+
+    <header id="myheaderdark" style="z-index: 9999;max-width: 900px;min-height: 50px;display: flex;justify-content: space-between;align-items: center; position: relative;margin:0 !important;padding:0 !important; auto;color:white;background-color:rgb(80,45,15);pointer-events: auto;">
+        <nav id="mynav">
+            <div class="mybutton">
+                <a href="https://coursesite.lehigh.edu/course/view.php?id=195548">CS Home</a>
+            </div>
+            <div class="mybutton">
+                <a href="https://coursesite.lehigh.edu/mod/page/view.php?id=3487621">Academics</a>
+            </div>
+            <div class="mybutton">
+                <a href="https://coursesite.lehigh.edu/mod/page/view.php?id=3489370">Extracurriculars</a>
+            </div>
+            <div class="mybutton">
+                <a href="https://coursesite.lehigh.edu/mod/page/view.php?id=3489373">Employment</a>
+            </div>
+            <div class="mybutton">
+                <a href="https://coursesite.lehigh.edu/mod/page/view.php?id=3854771">Technology</a>
+            </div>
+            <div class="mybutton">
+                <a href="https://coursesite.lehigh.edu/mod/page/view.php?id=4151312">Programming</a>
+            </div>
+            <div class="mybutton">
+                <a href="https://coursesite.lehigh.edu/mod/page/view.php?id=3489382">Faculty</a>
+            </div>
+        </nav>
+    </header>
+</div>
+
+
+
+<nav id="customlehighnav" class="navbar navbar-expand" style="display:none">
+
+    <span class="logo d-none d-sm-inline" style="margin-right: 25px;">
+        <img src="https://coursesite.lehigh.edu/pluginfile.php/1/core_admin/logocompact/300x300/1641185111/lehigh_logo_KO.png" alt="Home">
+    </span>
+
+
+
+    <a href="https://coursesite.lehigh.edu" id="myhomebutton" class="navbar-brand aalink has-logo
+                    ">
+        <!-- 
+                    <span class="logo d-none d-sm-inline">
+                        <img src="https://coursesite.lehigh.edu/pluginfile.php/1/core_admin/logocompact/300x300/1641185111/lehigh_logo_KO.png" alt="Home">
+                    </span>
+                 -->
+        <span class="site-name d-none d-md-inline">Home</span>
+    </a>
+    <ul id="rightstuff">
+        <!-- user_menu -->
+        <li class="nav-item d-flex align-items-center">
+            <div class="usermenu">
+                <div class="action-menu moodle-actionmenu nowrap-items d-inline" id="action-menu-0" data-enhance="moodle-core-actionmenu">
+
+                    <div class="menubar d-flex " id="action-menu-0-menubar" role="menubar">
+
+
+
+
+                        <div class="action-menu-trigger">
+                            <div class="dropdown">
+                                <a href="#" tabindex="0" class="d-inline-block  dropdown-toggle icon-no-margin" id="action-menu-toggle-0" aria-label="User menu" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" aria-controls="action-menu-0-menu">
+
+                                    <span class="userbutton"><span class="usertext mr-1">Joshua (Josh they/them) Tripoli</span><span class="avatars"><span class="avatar current"><img src="https://coursesite.lehigh.edu/pluginfile.php/3665645/user/icon/classic/f2?rev=120415381" class="userpicture" width="35" height="35" alt=""></span></span></span>
+
+                                    <b class="caret"></b>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right menu  align-tr-br" id="action-menu-0-menu" data-rel="menu-content" aria-labelledby="action-menu-toggle-0" role="menu" data-align="tr-br">
+                                    <a href="https://coursesite.lehigh.edu/my/" class="dropdown-item menu-action" role="menuitem" data-title="mymoodle,admin" aria-labelledby="actionmenuaction-1">
+                                        <i class="icon fa fa-tachometer fa-fw " aria-hidden="true"></i>
+                                        <span class="menu-action-text" id="actionmenuaction-1">Dashboard</span>
+                                    </a>
+                                    <div class="dropdown-divider" role="presentation"><span class="filler">&nbsp;</span></div>
+                                    <a href="https://coursesite.lehigh.edu/user/profile.php?id=73301" class="dropdown-item menu-action" role="menuitem" data-title="profile,moodle" aria-labelledby="actionmenuaction-2">
+                                        <i class="icon fa fa-user fa-fw " aria-hidden="true"></i>
+                                        <span class="menu-action-text" id="actionmenuaction-2">Profile</span>
+                                    </a>
+                                    <a href="https://coursesite.lehigh.edu/grade/report/overview/index.php" class="dropdown-item menu-action" role="menuitem" data-title="grades,grades" aria-labelledby="actionmenuaction-3">
+                                        <i class="icon fa fa-table fa-fw " aria-hidden="true"></i>
+                                        <span class="menu-action-text" id="actionmenuaction-3">Grades</span>
+                                    </a>
+                                    <a href="https://coursesite.lehigh.edu/message/index.php" class="dropdown-item menu-action" role="menuitem" data-title="messages,message" aria-labelledby="actionmenuaction-4">
+                                        <i class="icon fa fa-comment fa-fw " aria-hidden="true"></i>
+                                        <span class="menu-action-text" id="actionmenuaction-4">Messages</span>
+                                    </a>
+                                    <a href="https://coursesite.lehigh.edu/user/preferences.php" class="dropdown-item menu-action" role="menuitem" data-title="preferences,moodle" aria-labelledby="actionmenuaction-5">
+                                        <i class="icon fa fa-wrench fa-fw " aria-hidden="true"></i>
+                                        <span class="menu-action-text" id="actionmenuaction-5">Preferences</span>
+                                    </a>
+                                    <div class="dropdown-divider" role="presentation"><span class="filler">&nbsp;</span></div>
+                                    <a href="https://coursesite.lehigh.edu/login/logout.php?sesskey=mf0KIu5iJU" class="dropdown-item menu-action" role="menuitem" data-title="logout,moodle" aria-labelledby="actionmenuaction-6">
+                                        <i class="icon fa fa-sign-out fa-fw " aria-hidden="true"></i>
+                                        <span class="menu-action-text" id="actionmenuaction-6">Log out</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </li>
+    </ul>
+    <!-- search_box -->
+</nav>
+
+
+
+<div id="customlehighnav2" class="header-container" style="display:none;position:fixed;top:0px;left:0px;min-height: 50px;width: 100%;z-index:9999;pointer-events:none;background-color: transparent;">
+    <header style="z-index: 99999;max-width: 900px;min-height: 50px;display: flex;justify-content: center;align-items: center; position: relative;color:white;background-color:rgb(80,45,15);pointer-events: auto;margin:0 auto;">
+        <nav id="mynav">
+            <div class="mybutton" style="margin-right:-8px">
+                <a href="https://coursesite.lehigh.edu/course/view.php?id=195548">Home</a>
+            </div>
+            <div class="mybutton" style="margin-right:-8px">
+                <a href="https://coursesite.lehigh.edu/mod/page/view.php?id=3487621">Academics</a>
+            </div>
+            <div class="mybutton" style="margin-right:-8px">
+                <a href="https://coursesite.lehigh.edu/mod/page/view.php?id=3489370">Extracurriculars</a>
+            </div>
+            <div class="mybutton" style="margin-right:-8px">
+                <a href="https://coursesite.lehigh.edu/mod/page/view.php?id=3489373">Employment</a>
+            </div>
+            <div class="mybutton" style="margin-right:-8px">
+                <a href="https://coursesite.lehigh.edu/mod/page/view.php?id=3854771">Technology</a>
+            </div>
+            <div class="mybutton" style="margin-right:-8px">
+                <a href="https://coursesite.lehigh.edu/mod/page/view.php?id=4151312">Programming</a>
+            </div>
+            <div class="mybutton" style="margin-right:-8px">
+                <a href="https://coursesite.lehigh.edu/mod/page/view.php?id=3489382">Faculty</a>
+            </div>
+        </nav>
+    </header>
+</div>
+
+
+
+
+
+
+<h2></h2><button class="glow-on-hover" onclick="swapToDark()" style="color: black;background: white;cursor: pointer;">Dark Mode</button>
+<button class="glow-on-hover" onclick="removeDark()" style="color: black;background: white;cursor: pointer;">Light Mode</button>
+
+
+
+
+
+<script type="text/javascript">
+    function swapToDark() {
+        localStorage.setItem("styleChoice", "dark");
+
+
+        var csdarktheme = '*{background-color:black !important;color:white !important}.card-footer{background-color: #004346 !important;z-index:999999999 !important;}.card-bg-light{background-color: rgba(0, 177, 186, 1)  !important;border: 2px solid rgba(0, 177, 186, 1) ;z-index: 2 !important;padding:0 !important;margin: 0 !important;}.d-flex{background-color:transparent !important;}.col-6.card-body, .card-text{background-color: black !important; font-weight: 400 !important;}.grid-info{background-color: black !important;color: white !important;}.card-title-cs{background-color: rgba(0, 177, 186, 1)  !important; color: black !important;z-index:200 !important;}.block-theme-widget container{border: 4px solid  rgb(20,208,218) !important; padding-top:20px !important;}.btn btn-secondary btn-block rounded{background-color: green !important; color: white;}.mybutton{padding-top:20px;text-align: center;border: 2px solid #3ecbb8;font-family: inherit;font-size: 16px;display: inline-block;position: relative;color:rgb(255,255,255);height:48px;width:120px;margin:0;padding:0;}.mybutton a{text-decoration: none;color:white}.header-container{left:250px !important;padding:0px !important;margin:0px !important;z-index:1031 !important;background-color: blue !important;}.logo, .nav-item{z-index:9999999999999 !important}.mybutton{padding:0px !important;margin-left: -6px !important;left:100px;background-color: black !important;}.header-container,#lightnav,#mynav,#myheaderdark{background-color: transparent !important;pointer-events:none !important;}#mynav{margin:0 !important;padding:0 !important}.mybutton{pointer-events:auto;padding-top:10px !important;}#yui_3_17_2_1_1655515019675_4161{background-color:black !important;color:black !important}*{background-color:black !important;color:white !important}.fixed-top,.navbar{background-color:black !important;color:white !important}#completionprogressid{display: none !important}#myMenu ul a{background-color: #222222 !important;}.menu-item a:hover {background-color: #5A5A5A !important;} #myMenu ul a:hover  {background-color: #5A5A5A !important;}';
+
+
+
+
+        var darkmode = document.createElement('style');
+        darkmode.setAttribute("class", "darkmode");
+
+        darkmode.appendChild(document.createTextNode(csdarktheme));
+
+        document.getElementsByTagName('head')[0].appendChild(darkmode);
+
+    }
+</script>
+
+
+<script type="text/javascript">
+    function removeDark() {
+        localStorage.setItem("styleChoice", "light");
+
+        const elements = document.getElementsByTagName("head")[0].getElementsByClassName('darkmode');
+
+        while (elements.length > 0) {
+            elements[0].parentNode.removeChild(elements[0]);
+        }
+
+
+        var cssRules =
+            '.mybutton{font-family: inherit;padding: 10px 5px;margin-left: 20px;font-size: 17px;display: inline-block;margin-top:2px;position: relative;color:rgb(255,255,255)}.mybutton a{text-decoration: none;color:white}#completionprogressid{display: none !important}';
+
+
+
+        var styleElement = document.createElement('style');
+
+        styleElement.appendChild(document.createTextNode(cssRules));
+
+        document.getElementsByTagName('head')[0].appendChild(styleElement);
+
+    }
+</script>
